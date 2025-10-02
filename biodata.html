@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Biodata Jefri Al Bukhori</title>
+  <style>
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #eef2f7;
+      color: #333;
+      transition: 0.3s;
+    }
+    header {
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      position: relative;
+    }
+    .toggle-btn {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      background: white;
+      color: #1e3c72;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .toggle-btn:hover {
+      background: #ddd;
+    }
+    .clock {
+      font-size: 14px;
+      margin-top: 8px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+    .profile {
+      display: flex;
+      align-items: center;
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      transition: 0.3s;
+    }
+    .profile img {
+      width: 160px;
+      border-radius: 50%;
+      border: 4px solid #2a5298;
+      object-fit: cover;
+    }
+    .profile-info {
+      margin-left: 25px;
+    }
+    .profile-info p {
+      margin: 8px 0;
+      font-size: 16px;
+    }
+    h2 {
+      color: #2a5298;
+      margin-top: 30px;
+      border-left: 6px solid #1e3c72;
+      padding-left: 10px;
+      transition: 0.3s;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      transition: 0.3s;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 15px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: center;
+      font-size: 15px;
+    }
+    th {
+      background-color: #2a5298;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    tr:hover {
+      background-color: #dce6f9;
+      transition: 0.3s;
+    }
+    tr.active {
+      background-color: #ffeb99 !important;
+    }
+    footer {
+      text-align: center;
+      background: #1e3c72;
+      color: white;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 14px;
+      box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+    }
+    .search-box {
+      margin-bottom: 15px;
+      text-align: right;
+    }
+    .search-box input {
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      width: 250px;
+      font-size: 14px;
+    }
+
+    body.dark {
+      background-color: #121212;
+      color: #f1f1f1;
+    }
+    body.dark header {
+      background: linear-gradient(to right, #000428, #004e92);
+    }
+    body.dark .toggle-btn {
+      background: #222;
+      color: #f1f1f1;
+    }
+    body.dark .profile, 
+    body.dark .card {
+      background: #1e1e1e;
+      color: #f1f1f1;
+      box-shadow: 0 6px 12px rgba(255,255,255,0.05);
+    }
+    body.dark h2 {
+      color: #4da6ff;
+      border-left: 6px solid #0077ff;
+    }
+    body.dark th {
+      background-color: #004e92;
+    }
+    body.dark tr:nth-child(even) {
+      background-color: #1f1f1f;
+    }
+    body.dark tr:hover {
+      background-color: #333;
+    }
+    body.dark footer {
+      background: #000428;
+    }
+    body.dark .search-box input {
+      background: #222;
+      color: #f1f1f1;
+      border: 1px solid #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Biodata Mahasiswa</h1>
+    <p>Universitas Sumatera Utara - Semester Ganjil 2025/2026</p>
+    <div class="clock" id="clock"></div>
+    <button class="toggle-btn" onclick="toggleMode()">🌙 Dark Mode</button>
+  </header>
+
+  <div class="container">
+    <div class="profile">
+      <img src="jefri.jpg" alt="Foto Jefri Al Bukhori">
+      <div class="profile-info">
+        <p><b>Nama Lengkap:</b> Jefri Al Bukhori</p>
+        <p><b>NIM:</b> 241401142</p>
+        <p><b>Kom:</b> A</p>
+        <p><b>Hobi:</b> Olahraga, game</p>
+        <p><b>Motto Hidup:</b> "Diam bukan kalah, tapi menyiapkan langkah."</p>
+        <button onclick="showBiodata()">📌 Lihat Biodata Singkat</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Tentang Saya</h2>
+      <p>
+        Tidak toxic dan rajin mengaji, Halo, nama saya Jefri. Saya adalah mahasiswa S1 Ilmu Komputer, 
+        dengan NIM <b>241401142</b>, saya dari Kom A. Hobi saya adalah olahraga seperti sepak bola, 
+        badminton, dan tenis meja. Selain olahraga saya juga sering main game untuk hiburan saya.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Jadwal Kuliah Semester Ganjil 2025/2026</h2>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="🔍 Cari mata kuliah, dosen, hari...">
+      </div>
+      <table id="jadwal">
+        <tr>
+          <th>No</th>
+          <th>Kode</th>
+          <th>Mata Kuliah</th>
+          <th>SKS</th>
+          <th>Kelas</th>
+          <th>Hari & Jam</th>
+          <th>Ruangan</th>
+          <th>Dosen</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>ILK2108</td>
+          <td>Wirausaha Digital</td>
+          <td>3</td>
+          <td>A</td>
+          <td>Jumat, 08:00 - 09:40</td>
+          <td>D-104</td>
+          <td>Dr. T. Henny Febriana Harumy S.Kom., M.Kom</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>ILK2105</td>
+          <td>Praktikum Basis Data</td>
+          <td>3</td>
+          <td>A</td>
+          <td>-</td>
+          <td>-</td>
+          <td>Insidini Fawwaz M.Kom</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>ILK2104</td>
+          <td>Basis Data</td>
+          <td>3</td>
+          <td>A</td>
+          <td>Rabu, 14:40 - 17:10</td>
+          <td>D-103</td>
+          <td>Insidini Fawwaz M.Kom</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>ILK2110</td>
+          <td>Praktikum Struktur Data</td>
+          <td>3</td>
+          <td>A</td>
+          <td>-</td>
+          <td>-</td>
+          <td>Insidini Fawwaz M.Kom</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>ILK2109</td>
+          <td>Struktur Data</td>
+          <td>3</td>
+          <td>A</td>
+          <td>Jumat, 13:50 - 16:20</td>
+          <td>D-101</td>
+          <td>Anandhini Medianty Nababan S.Kom., M.T</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>ILK2107</td>
+          <td>Praktikum Pemrograman Web</td>
+          <td>3</td>
+          <td>A</td>
+          <td>-</td>
+          <td>-</td>
+          <td>Dewi Sartika Br Ginting S.Kom., M.Kom</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>ILK2106</td>
+          <td>Pemrograman Web</td>
+          <td>3</td>
+          <td>A</td>
+          <td>Rabu, 08:00 - 10:30</td>
+          <td>D-103</td>
+          <td>Dewi Sartika Br Ginting S.Kom., M.Kom</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>MNJ3104</td>
+          <td>Perilaku Konsumen</td>
+          <td>-</td>
+          <td>KWU-B</td>
+          <td>Selasa, 10:30 - 13:00</td>
+          <td>GL 4A</td>
+          <td>Farianita Lestari S.E., M.Sc</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>KOM3105</td>
+          <td>Produksi Media Digital</td>
+          <td>-</td>
+          <td>KOM3</td>
+          <td>Senin, 14:30 - 17:00</td>
+          <td>2.5</td>
+          <td>Farida Hanim S.Sos., M.I.Kom</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>ILK1108</td>
+          <td>Organisasi Arsitektur Komputer</td>
+          <td>3</td>
+          <td>B</td>
+          <td>Rabu, 10:30 - 13:00</td>
+          <td>D-101</td>
+          <td>Amer Sharif S.Si, M.Kom</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 | Website Tugas Pemrograman Web - Jefri Al Bukhori
+  </footer>
+
+  <script>
+
+    function toggleMode() {
+      document.body.classList.toggle("dark");
+      let btn = document.querySelector(".toggle-btn");
+      if (document.body.classList.contains("dark")) {
+        btn.textContent = "☀️ Light Mode";
+      } else {
+        btn.textContent = "🌙 Dark Mode";
+      }
+    }
+
+    function updateClock() {
+      let now = new Date();
+      let time = now.toLocaleTimeString("id-ID");
+      document.getElementById("clock").textContent = "⏰ " + time;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    function showBiodata() {
+      alert("Nama: Jefri Al Bukhori\nNIM: 241401142\nKom: A\nHobi: Olahraga & Game");
+    }
+
+    let rows = document.querySelectorAll("#jadwal tr");
+    rows.forEach((row, index) => {
+      if (index === 0) return;
+      row.addEventListener("click", () => {
+        rows.forEach(r => r.classList.remove("active"));
+        row.classList.add("active");
+      });
+    });
+
+    document.getElementById("searchInput").addEventListener("keyup", function () {
+      let filter = this.value.toLowerCase();
+      let rows = document.querySelectorAll("#jadwal tr");
+
+      rows.forEach((row, index) => {
+        if (index === 0) return; 
+        let text = row.textContent.toLowerCase();
+        if (text.includes(filter)) {
+          row.style.display = "";
+        } else {
+          row.style.display = "none";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
