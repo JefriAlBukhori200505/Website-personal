@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Elegan Jefri</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="relative min-h-screen text-gray-800 overflow-x-hidden">
+
+  <!-- Background animasi -->
+  <div class="absolute inset-0 -z-10 bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-500 animate-gradient"></div>
+
+  <!-- Header -->
+  <header class="text-center py-10 text-white">
+    <h1 class="text-4xl md:text-5xl font-bold drop-shadow-lg">🌐 Jefri Al Bukhori</h1>
+    <p class="mt-3 text-lg opacity-90 italic">“Programmer pemula yang akan menjadi programmer hebat kedepannya”</p>
+  </header>
+
+  <!-- Navigasi -->
+  <nav class="flex justify-center gap-8 bg-white/10 backdrop-blur-md py-4 rounded-full w-11/12 md:w-2/3 mx-auto shadow-lg border border-white/20">
+    <a href="#" class="nav-link" onclick="showSection('biodata')">🏠 Biodata</a>
+    <a href="#" class="nav-link" onclick="showSection('materi')">📚 Materi</a>
+    <a href="#" class="nav-link" onclick="showSection('inspirasi')">💫 Inspirasi</a>
+  </nav>
+
+  <!-- Konten -->
+  <main class="w-11/12 md:w-3/4 bg-white/80 backdrop-blur-xl mt-10 mb-10 p-8 rounded-3xl shadow-2xl">
+
+    <!-- BIODATA -->
+    <section id="biodata" class="active fade">
+      <h2 class="text-3xl font-bold text-indigo-600 mb-4">🧑‍💻 Biodata</h2>
+      <div class="grid md:grid-cols-2 gap-6 items-center">
+        <div>
+          <p class="mb-2"><strong>Nama:</strong> Jefri Al Bukhori</p>
+          <p class="mb-2"><strong>Program Studi:</strong> Ilmu Komputer</p>
+          <p class="mb-2"><strong>Hobi:</strong> Ngoding, Desain Web, dan Main Game</p>
+          <p class="mb-2"><strong>Tujuan Belajar Web:</strong> Membuat website interaktif yang keren dan bermanfaat!</p>
+        </div>
+        <div class="flex justify-center">
+          <img src="jefri.jpg" class="w-48 hover:scale-105 transition-transform" alt="Jefri Al Bukhori">
+        </div>
+      </div>
+    </section>
+
+    <!-- MATERI -->
+    <section id="materi" class="fade">
+      <h2 class="text-3xl font-bold text-indigo-600 mb-4">📘 Mengenal HTML, CSS, JS, dan Tailwind</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="card bg-blue-50 border-blue-300">
+          <h3 class="text-blue-600 font-bold text-xl mb-2">HTML</h3>
+          <p>Struktur dasar halaman web, seperti teks, gambar, dan tautan.</p>
+          <p class="mt-2 text-sm text-gray-600">Contoh: <code>&lt;h1&gt;Halo Dunia&lt;/h1&gt;</code></p>
+        </div>
+
+        <div class="card bg-pink-50 border-pink-300">
+          <h3 class="text-pink-600 font-bold text-xl mb-2">CSS</h3>
+          <p>Mengatur tampilan web agar lebih indah, dengan warna dan layout.</p>
+          <p class="mt-2 text-sm text-gray-600">Contoh: <code>body { color: blue; }</code></p>
+        </div>
+
+        <div class="card bg-yellow-50 border-yellow-300">
+          <h3 class="text-yellow-600 font-bold text-xl mb-2">JavaScript</h3>
+          <p>Menambah interaktivitas seperti tombol, efek, dan animasi.</p>
+          <p class="mt-2 text-sm text-gray-600">Contoh: <code>alert('Halo Dunia!');</code></p>
+        </div>
+
+        <div class="card bg-green-50 border-green-300">
+          <h3 class="text-green-600 font-bold text-xl mb-2">Tailwind CSS</h3>
+          <p>Framework CSS cepat dengan class siap pakai yang efisien.</p>
+          <p class="mt-2 text-sm text-gray-600">Contoh: <code>&lt;div class="text-red-500"&gt;Hello&lt;/div&gt;</code></p>
+        </div>
+      </div>
+
+      <div class="mt-8">
+        <h3 class="text-2xl font-semibold text-indigo-600">💡 Langkah Membuat Website Sederhana</h3>
+        <ol class="list-decimal list-inside mt-3 space-y-1">
+          <li>Buat file <code>index.html</code>, <code>style.css</code>, dan <code>script.js</code></li>
+          <li>Tulis struktur HTML</li>
+          <li>Tata desain dengan CSS / Tailwind</li>
+          <li>Tambahkan efek interaktif pakai JavaScript</li>
+        </ol>
+      </div>
+
+      <div class="mt-6">
+        <h3 class="text-2xl font-semibold text-indigo-600">🗣️ Kesan & Pesan</h3>
+        <p class="mt-2">Pemrograman web itu seperti seni — semakin banyak berlatih, semakin indah karya yang kamu buat! 🌈</p>
+      </div>
+    </section>
+
+    <!-- INSPIRASI -->
+    <section id="inspirasi" class="fade">
+      <h2 class="text-3xl font-bold text-indigo-600 mb-4">🌍 Inspirasi Programmer Dunia</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="profile">
+          <img src="beners-lee.png" alt="Tim Berners-Lee">
+          <h3>Tim Berners-Lee</h3>
+          <p>Pencipta WWW. Tanpa dia, tak akan ada dunia internet seperti sekarang!</p>
+        </div>
+        <div class="profile">
+          <img src="guidovanrossum.png" alt="Guido van Rossum">
+          <h3>Guido van Rossum</h3>
+          <p>Pencipta Python — bahasa pemrograman yang mudah dan populer di dunia AI.</p>
+        </div>
+        <div class="profile">
+          <img src="markzuckerberg.png" alt="Mark Zuckerberg">
+          <h3>Mark Zuckerberg</h3>
+          <p>Pendiri Facebook, inspirasi bagi generasi muda untuk berinovasi di dunia digital.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center text-white py-6 mt-auto bg-black/20 backdrop-blur-md">
+    <p>© 2025 Jefri Al Bukhori | Dibuat dengan html, java script dan Tailwind CSS</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
